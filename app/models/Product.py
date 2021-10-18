@@ -14,3 +14,4 @@ class Product(models.Model):
     owner = models.ForeignKey(CustomUser, on_delete=models.CASCADE, default=None)
     pics = ArrayField(models.CharField(max_length=127))
     destination = models.TextField(blank=True, null=True, )
+    status = models.BooleanField(default=False,blank=True)
